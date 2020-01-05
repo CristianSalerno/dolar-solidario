@@ -1,11 +1,12 @@
 import express from "express";
 import mongoose from "mongoose";
 const axios = require("axios");
-
+const cors = require("cors")
 require("./models/dolar");
 
 // ! Inicializar express
 const app = express();
+app.use(cors());
 
 const databaseUrl =
   "mongodb://dolar_solidario_admin:cris2023@ds149279.mlab.com:49279/dolar-solidario";
